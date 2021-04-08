@@ -6,8 +6,8 @@ namespace bonusoppgave_brusautomat
 {
     class Sodamachine
     {
-        private int _moneyInMachine = 0;
-        List<Soda> _sodas;
+        public int _moneyInMachine = 100;
+        public List<Soda> _sodas;
         
 
         public Sodamachine(List<Soda> sodas)

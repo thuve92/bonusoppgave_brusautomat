@@ -13,6 +13,8 @@ namespace bonusoppgave_brusautomat
                 new CocaCola(19, "330 ml"),
                 new Urge(23, "330 ml"),
             };
+
+            Sodamachine sodamachine = new Sodamachine(sodas);
         }
     }
 }

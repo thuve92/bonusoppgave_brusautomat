@@ -6,11 +6,11 @@ namespace bonusoppgave_brusautomat
 {
     abstract class Command
     {
-        private Sodamachine sodamachine;
+        private Sodamachine _sodamachine;
 
         protected Command(Sodamachine sodamachine)
         {
-            this.sodamachine = sodamachine;
+            _sodamachine = sodamachine;
         }
 
         public abstract void DoCommand();

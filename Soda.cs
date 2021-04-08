@@ -6,9 +6,9 @@ namespace bonusoppgave_brusautomat
 {
     class Soda
     {
-        private string _name;
-        private int _price;
-        private string _sodaSize;
+        public string _name;
+        public int _price;
+        public string _sodaSize;
 
         public Soda(string name, int price, string size)
         {
