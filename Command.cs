@@ -4,13 +4,13 @@ using System.Text;
 
 namespace bonusoppgave_brusautomat
 {
-    abstract class Command
+    internal abstract class Command
     {
-        private Sodamachine _sodamachine;
+        public Sodamachine Sodamachine { get; }
 
         protected Command(Sodamachine sodamachine)
         {
-            _sodamachine = sodamachine;
+            Sodamachine = sodamachine;
         }
 
         public abstract void DoCommand();

@@ -4,7 +4,20 @@ using System.Text;
 
 namespace bonusoppgave_brusautomat
 {
-    class CoinInput
+    class CoinInput : Command
     {
+        public CoinInput(Sodamachine sodamachine) : base(sodamachine)
+        {
+        }
+
+        public override void DoCommand()
+        {
+
+        }
+
+        private void TakeInCoins()
+        {
+            
+        }
     }
 }

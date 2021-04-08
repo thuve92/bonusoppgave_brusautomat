@@ -7,10 +7,11 @@ namespace bonusoppgave_brusautomat
     class BuyDrink : Command
     {
         private Soda _chosenSoda;
-        public Sodamachine sodamachine;
-        public BuyDrink(Sodamachine Sodamachine) : base(Sodamachine)
+
+        public Sodamachine Sodamachine;
+        public BuyDrink(Sodamachine sodamachine) : base(sodamachine)
         {
-            sodamachine = Sodamachine;
+            this.Sodamachine = sodamachine;
         }
 
         public override void DoCommand()
@@ -18,7 +19,7 @@ namespace bonusoppgave_brusautomat
             var price = _chosenSoda._price;
             if (EnoughMoney(price))
             {
-                sodamachine._moneyInMachine -= price;
+                Sodamachine._moneyInMachine -= price;
                 Console.WriteLine($"Bought {_chosenSoda._name}");
             }
             else
@@ -29,12 +30,12 @@ namespace bonusoppgave_brusautomat
 
         private bool EnoughMoney(int price)
         {
-            return price < sodamachine._moneyInMachine;
+            return price < Sodamachine._moneyInMachine;
         }
 
         public void ChooseSoda(int index)
         {
-            _chosenSoda = sodamachine._sodas[index];
+            _chosenSoda = Sodamachine._sodas[index];
         }
     }
 }
